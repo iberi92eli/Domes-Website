@@ -1,0 +1,41 @@
+{
+  "name": "domes-legal-next-payload-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "payload:importmap": "payload generate:importmap",
+    "payload:types": "payload generate:types",
+    "predev": "payload generate:importmap && payload generate:types",
+    "prebuild": "payload generate:importmap && payload generate:types"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.68.5",
+    "@payloadcms/db-sqlite": "^3.68.5",
+    "@payloadcms/next": "^3.68.5",
+    "@payloadcms/richtext-lexical": "^3.68.5",
+    "graphql": "^16.11.0",
+    "next": "^16.2.0",
+    "payload": "^3.68.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.25.0",
+    "eslint-config-next": "^16.2.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.0"
+  },
+  "overrides": {
+    "drizzle-orm": "0.45.2"
+  }
+}
